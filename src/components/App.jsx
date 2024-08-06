@@ -1,9 +1,15 @@
+import { Provider } from "react-redux";
+import MyStore from "./MyStore";
+import store from "../reducers/fruitReducer/FruitStore";
+
 const App = () => {
     return ( 
         <>
-            <div className="text-center">
-                <h1 className="btn btn-success my-1">My App</h1>
-            </div>
+            <section className="container">
+                {/* <Provider store={store}> */}
+                    <MyStore/> 
+                {/* </Provider> */}
+            </section>
         </>
     );
 }
