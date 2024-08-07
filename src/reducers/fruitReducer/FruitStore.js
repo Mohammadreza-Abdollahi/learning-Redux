@@ -1,6 +1,6 @@
-import { createStoreHook } from "react-redux";
-import fruitReducer from "./FruitReducer";
+// import { createStore } from "redux";
+// import fruitReducer from "./FruitReducer";
 
-const store = createStoreHook(fruitReducer);
+// const store = createStore(fruitReducer);
 
-export default store;
+// export default store;

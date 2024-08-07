@@ -1,14 +1,14 @@
 import { Provider } from "react-redux";
 import MyStore from "./MyStore";
-import store from "../reducers/fruitReducer/FruitStore";
+import store from "../reducers/Store";
 
 const App = () => {
     return ( 
         <>
             <section className="container">
-                {/* <Provider store={store}> */}
+                <Provider store={store}>
                     <MyStore/> 
-                {/* </Provider> */}
+                </Provider>
             </section>
         </>
     );
