@@ -1,17 +1,11 @@
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { getErrors, getUsers, requestToServer } from "../reducers/usersReducer/UserActions";
+import { getUsersOut } from "../reducers/usersReducer/UserActions";
 
 const MyUsers = () => {
     const {loading , data , error} = useSelector(state=>state);
     const dispatch = useDispatch();
     const handleUsers = ()=>{
-        dispatch(requestToServer())
-        axios.get('https://jsonplaceholder.typicode.com/users').then(res=>{
-            dispatch(getUsers(res.data))
-        }).catch(error=>{
-            dispatch(getErrors(error))
-        })
+        dispatch(getUsersOut())
     }
     return ( 
         <>
